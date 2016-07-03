@@ -1,9 +1,9 @@
-Joomla! CMS™ [![Analytics](https://ga-beacon.appspot.com/UA-544070-3/joomla-cms/readme)](https://github.com/igrigorik/ga-beacon)
+Joomla! CMS™
 ====================
 
 Build Status
 ---------------------
-Travis-CI: [![Build Status](https://travis-ci.org/Digital-Peak-Incubator/tpl_tauristar.svg?branch=staging)](https://travis-ci.org/Digital-Peak-Incubator/tpl_tauristar)
+Travis-CI: [![Build Status](https://travis-ci.org/Digital-Peak-Incubator/tpl_tauristar.svg?branch=tpl_tauristar)](https://travis-ci.org/Digital-Peak-Incubator/tpl_tauristar)
 
 What is this?
 ---------------------
