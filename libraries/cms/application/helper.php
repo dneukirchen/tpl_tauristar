@@ -313,7 +313,8 @@ class JApplicationHelper
 	{
 		if (self::$activeFramework === null)
 		{
-			self::$activeFramework = JFactory::getApplication()->getTemplate(true)->params->get('framework');
+			$template = JFactory::getApplication()->getTemplate(true);
+			self::$activeFramework = is_object($template) && $template->params ? $template->params->get('framework') : null;
 		}
 		return self::$activeFramework;
 	}
