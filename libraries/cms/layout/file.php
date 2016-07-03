@@ -174,7 +174,7 @@ class JLayoutFile extends JLayoutBase
 
 		$this->addDebugMessage('<strong>Include Paths:</strong> ' . print_r($includePaths, true));
 
-		$framework = JFactory::getApplication()->getTemplate(true)->params->get('framework');
+		$framework = JApplicationHelper::getActiveFramework();
 		$layoutPath = str_replace('.', '/', $this->layoutId);
 
 		// Search for suffixed versions. Example: tags.j31.php

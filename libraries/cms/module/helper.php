@@ -292,7 +292,7 @@ abstract class JModuleHelper
 			$defaultLayout = ($temp[1]) ? $temp[1] : 'default';
 		}
 
-		$framework = JFactory::getApplication()->getTemplate(true)->params->get('framework');
+		$framework = JApplicationHelper::getActiveFramework();
 
 		$paths = array(
 				JPATH_THEMES . '/' . $template . '/html/' . $module . '/' . $layout . '.' . $framework . '.php',

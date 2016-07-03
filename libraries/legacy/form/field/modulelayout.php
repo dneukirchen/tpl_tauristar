@@ -113,7 +113,12 @@ class JFormFieldModulelayout extends JFormField
 			$groups = array();
 
 			// Add the layout options from the module path.
-			if (is_dir($module_path) && ($module_layouts = JFolder::files($module_path, '^[^_]*\.php$')))
+			$excludes = array('^\..*', '.*~');
+			foreach (JApplicationHelper::getFrameworkList() as $framework)
+			{
+				$excludes[] = '.*\.' . $framework . '\.php';
+			}
+			if (is_dir($module_path) && ($module_layouts = JFolder::files($module_path, '^[^_]*\.php$', false , false, array(), $excludes)))
 			{
 				// Create the group for the module
 				$groups['_'] = array();

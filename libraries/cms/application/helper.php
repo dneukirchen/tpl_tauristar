@@ -25,6 +25,20 @@ class JApplicationHelper
 	protected static $_clients = array();
 
 	/**
+	 * A list of supported frameworks.
+	 *
+	 * @var  array
+	 */
+	private static $frameworks = array('bs3');
+
+	/**
+	 * The active framework.
+	 *
+	 * @var string
+	 */
+	private static $activeFramework = null;
+
+	/**
 	 * Return the name of the request component [main component]
 	 *
 	 * @param   string  $default  The default option
@@ -278,5 +292,29 @@ class JApplicationHelper
 		$data['group'] = (string) $xml->group;
 
 		return $data;
+	}
+
+	/**
+	 * Returns a list of supported frontend frameworks.
+	 *
+	 * @return  string[]  The frameworks
+	 */
+	public static function getFrameworkList()
+	{
+		return self::$frameworks;
+	}
+
+	/**
+	 * Retruns the active framework.
+	 *
+	 * @return  string  The active framework
+	 */
+	public static function getActiveFramework()
+	{
+		if (self::$activeFramework === null)
+		{
+			self::$activeFramework = JFactory::getApplication()->getTemplate(true)->params->get('framework');
+		}
+		return self::$activeFramework;
 	}
 }
