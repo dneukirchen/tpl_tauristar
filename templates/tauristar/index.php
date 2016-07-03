@@ -1,4 +1,12 @@
 <?php
+/**
+ * @package     Joomla.Site
+ * @subpackage  Templates.tauristar
+ *
+ * @copyright   Copyright (C) 2005 - 2016 Open Source Matters, Inc. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ */
+
 defined('_JEXEC') or die;
 
 $params = JFactory::getApplication()->getTemplate(true)->params;
@@ -62,13 +70,13 @@ switch ($params->get('mode', 2))
 						<jdoc:include type="modules" name="menu" style="none" />
 					</div>
 				</div>
-		    </nav>
+			</nav>
 		</div>
 	</div>
 
-    <?php
-    if ($this->countModules('top'))
-    { ?>
+	<?php
+	if ($this->countModules('top'))
+	{ ?>
 	<div id="top">
 		<div class="container">
 			<div class="row">
@@ -76,67 +84,67 @@ switch ($params->get('mode', 2))
 			</div>
 		</div>
 	</div>
-    <hr class="soften">
-    <?php
-    } ?>
-    <div id="bodysection">
-    	<div class="container">
-      		<div class="row">
-            	<?php
-            	$left = $this->countModules('sidebar-left');
-            	$right = $this->countModules('sidebar-right');
-            	$sidebarWidth = $params->get('sidebar-width', 2);
-            	$contentSpan = $right ? 12 - $sidebarWidth : 12;
-            	$contentSpan = $left ? $contentSpan - $sidebarWidth : $contentSpan;
-            	if ($left)
-            	{ ?>
-                <div class="col-md-<?php echo $sidebarWidth?>">
-                	<jdoc:include type="modules" name="sidebar-left" style="xhtml" />
-                </div>
-                <?php
-            	} ?>
-                <div class="content col-md-<?php echo $contentSpan?>">
-                	<jdoc:include type="message" />
-                	<jdoc:include type="component" />
-                </div>
-                <?php if ($right)
-                { ?>
-                <div class="col-md-<?php echo $sidebarWidth?>">
-                	<jdoc:include type="modules" name="sidebar-right" style="xhtml" />
-                </div>
-                <?php
-                } ?>
-            </div>
-    	</div>
+	<hr class="soften">
+	<?php
+	} ?>
+	<div id="bodysection">
+		<div class="container">
+			<div class="row">
+				<?php
+				$left = $this->countModules('sidebar-left');
+				$right = $this->countModules('sidebar-right');
+				$sidebarWidth = $params->get('sidebar-width', 2);
+				$contentSpan = $right ? 12 - $sidebarWidth : 12;
+				$contentSpan = $left ? $contentSpan - $sidebarWidth : $contentSpan;
+				if ($left)
+				{ ?>
+				<div class="col-md-<?php echo $sidebarWidth?>">
+					<jdoc:include type="modules" name="sidebar-left" style="xhtml" />
+				</div>
+				<?php
+				} ?>
+				<div class="content col-md-<?php echo $contentSpan?>">
+					<jdoc:include type="message" />
+					<jdoc:include type="component" />
+				</div>
+				<?php if ($right)
+				{ ?>
+					<div class="col-md-<?php echo $sidebarWidth?>">
+						<jdoc:include type="modules" name="sidebar-right" style="xhtml" />
+					</div>
+				<?php
+				} ?>
+			</div>
+		</div>
 	</div>
-    <?php
-    if ($this->countModules('breadcrumbs'))
-    { ?>
+	<?php
+	if ($this->countModules('breadcrumbs'))
+	{ ?>
 	<div id="breadcrumbs">
-	    <div class="container">
+		<div class="container">
 			<jdoc:include type="modules" name="breadcrumbs" />
 		</div>
 	</div>
-    <?php
-    }
-    if ($this->countModules('bottom'))
-    { ?>
-    <div id="bottom">
-        <div class="container">
+	<?php
+	}
+	if ($this->countModules('bottom'))
+	{ ?>
+	<div id="bottom">
+		<div class="container">
 			<jdoc:include type="modules" name="bottom" style="html5"/>
 		</div>
 	</div>
-    <?php
-    } ?>
-    <footer id="footer">
-    	<div class="container">
-		    <?php if ($this->countModules('footer'))
-		    { ?>
+	<?php
+	} ?>
+	<footer id="footer">
+		<div class="container">
+			<?php if ($this->countModules('footer'))
+			{ ?>
 				<jdoc:include type="modules" name="footer" style="xhtml" />
-		    <?php
-		    } ?>
+			<?php
+			} ?>
 			<p>Copyright &copy; <?php echo date('Y'); ?> - <?php echo JFactory::getApplication()->getCfg('sitename'); ?></p>
 		</div>
-    </footer>
+	</footer>
 </body>
 </html>

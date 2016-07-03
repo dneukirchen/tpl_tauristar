@@ -214,9 +214,9 @@ class JLayoutFile extends JLayoutBase
 	 * Searches for the given path in the included paths of this instance and
 	 * adds it to the local cache if available.
 	 *
-	 * @param    string  $rawPath   The raw path
-	 * @param    string  $layoutId  The layout ID
-	 * @param    string  $hash      The hash
+	 * @param   string  $rawPath   The raw path
+	 * @param   string  $layoutId  The layout ID
+	 * @param   string  $hash      The hash
 	 *
 	 * @return   string|boolean
 	 */

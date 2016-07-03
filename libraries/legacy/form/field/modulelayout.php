@@ -118,7 +118,7 @@ class JFormFieldModulelayout extends JFormField
 			{
 				$excludes[] = '.*\.' . $framework . '\.php';
 			}
-			if (is_dir($module_path) && ($module_layouts = JFolder::files($module_path, '^[^_]*\.php$', false , false, array(), $excludes)))
+			if (is_dir($module_path) && ($module_layouts = JFolder::files($module_path, '^[^_]*\.php$', false, false, array(), $excludes)))
 			{
 				// Create the group for the module
 				$groups['_'] = array();
