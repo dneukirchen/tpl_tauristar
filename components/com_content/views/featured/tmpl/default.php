@@ -53,12 +53,21 @@ JHtml::_('behavior.caption');
 		$key = ($key - $leadingcount) + 1;
 		$rowcount = (((int) $key - 1) % (int) $this->columns) + 1;
 		$row = $counter / $this->columns;
+		
+		if (!isset($rowClass))
+		{
+			$rowClass = 'row-fluid';
+		}
+		if (!isset($columnClass))
+		{
+			$columnClass = 'row-fluid';
+		}
 
 		if ($rowcount == 1) : ?>
 
-		<div class="items-row cols-<?php echo (int) $this->columns;?> <?php echo 'row-' . $row; ?> row-fluid">
+		<div class="items-row cols-<?php echo (int) $this->columns;?> <?php echo 'row-' . $row . ' ' . $rowClass; ?> ">
 		<?php endif; ?>
-			<div class="item column-<?php echo $rowcount;?><?php echo $item->state == 0 ? ' system-unpublished' : null; ?> span<?php echo round((12 / $this->columns));?>"
+			<div class="item column-<?php echo $rowcount;?><?php echo $item->state == 0 ? ' system-unpublished' : null; ?> <?php echo $columnClass . round((12 / $this->columns));?>"
 				itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
 			<?php
 					$this->item = &$item;

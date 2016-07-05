@@ -10,8 +10,13 @@
 defined('JPATH_BASE') or die;
 
 $list = $displayData['list'];
+
+if (!isset($paginationClass))
+{
+	$paginationClass = '';
+}
 ?>
-<ul>
+<ul class ="<?php echo $paginationClass; ?>">
 	<li class="pagination-start"><?php echo $list['start']['data']; ?></li>
 	<li class="pagination-prev"><?php echo $list['previous']['data']; ?></li>
 	<?php

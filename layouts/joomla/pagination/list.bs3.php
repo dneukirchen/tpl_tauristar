@@ -9,17 +9,6 @@
 
 defined('JPATH_BASE') or die;
 
-$list = $displayData['list'];
-?>
-<ul class="pagination">
-	<li class="pagination-start"><?php echo $list['start']['data']; ?></li>
-	<li class="pagination-prev"><?php echo $list['previous']['data']; ?></li>
-	<?php
-	foreach ($list['pages'] as $page)
-	{
-		echo '<li>' . $page['data'] . '</li>';
-	}
-	?>
-	<li class="pagination-next"><?php echo $list['next']['data']; ?></li>
-	<li class="pagination-end"><?php echo $list['end']['data']; ?></li>
-</ul>
+$paginationClass = 'pagination';
+
+require_once 'list.php';
