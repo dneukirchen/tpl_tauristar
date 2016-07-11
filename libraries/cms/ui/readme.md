@@ -120,8 +120,7 @@ You can override one or more methods of the core framework drivers in the same m
 /**
  * Class MyFramework
  * 
- * for example in: templates/my_template/myframework
- * we extend the JuiFrameworkBootstrap3 driver
+ * for example in: templates/my_template/mybootstrap3
  */
 class MyBootstrap3 extends JuiFrameworkBootstrap3
 {
