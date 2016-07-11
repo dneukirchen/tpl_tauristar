@@ -110,6 +110,10 @@ JUiFramework::register('my', function() {
 
 You can use a different framework for only one method. This way you can use multiple frameworks in your extension.
 
+Example: use bs3 modal instead of bs2:
+
+`JUiFramework::shouldUse('bs2')->modal($selector = 'modal', $params = array())`
+
 ### Override the core framework drivers
 
 You can override one or more methods of the core framework drivers in the same manner as you register custom frameworks.
