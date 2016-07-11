@@ -100,14 +100,17 @@ JUiFramework::register('my', function() {
 
 #### Use your custom framework
 
-// Outputs: "Hello World"
 `JUiFramework::helloWorld()`
+
+// Outputs: "Hello World"
 
 ### Switch the framework in special cases
 
 `JUiFramework::shouldUse($name)->method()`
 
 You can use a different framework for only one method if you use the shouldUse helper. 
+
+This way you can use multiple frameworks in your extension.
 
 ### Override the core framework drivers
 
@@ -250,16 +253,15 @@ JHtmlBootstrap will add the bootstrap 2 js files. This could be an issue with th
 
 Perhaps we can redirect all JHtmlBootstrap calls to JUiFramework internal.
 
-## TODO/Questions
+## TODO
 
-* What should happen, when a custom framework driver doesnt support the requested method? 
-    * Throw an exception?
-    * Try to load the method from a core framework driver
 * Replace all JHtml::_('framework.bootstrap') and JHtmlBootstrap::xxx() calls with the new JUiFramework calls.    
 * Implement bootstrap 2 and 3 drivers    
 * Tests
 * Documentation & Examples
 
+## Questions
 
-
-
+* What should happen, when a custom framework driver doesnt support the requested method? 
+    * Throw an exception?
+    * Try to load the method from a core framework driver
