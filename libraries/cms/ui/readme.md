@@ -108,9 +108,7 @@ JUiFramework::register('my', function() {
 
 `JUiFramework::shouldUse($name)->method()`
 
-You can use a different framework for only one method if you use the shouldUse helper. 
-
-This way you can use multiple frameworks in your extension.
+You can use a different framework for only one method. This way you can use multiple frameworks in your extension.
 
 ### Override the core framework drivers
 
@@ -147,9 +145,29 @@ JUiFramework::register('bs3', function() {
 
 ```
 
-#### Create the override
+## BC
 
-### The bootstrap 2 framework driver 
+JHtmlBootstrap should be marked as deprecated. 
+
+Until then JHtmlBootstrap and JUiFramework can run parallel. Perhaps we can redirect all JHtmlBootstrap calls to JUiFramework internal.
+
+JHtmlBootstrap will add the bootstrap 2 js files. This could be an issue with the js parts of the frameworks (js conflicts), but it is not different to the current situation, where a 3rd party developer add boostrap 3/4 scripts in their extensions.
+JUiFramework introduces a way to solve those conflicts (register a custom driver, which overrides core drivers).
+
+## TODO
+
+* Replace all JHtml::_('framework.bootstrap') and JHtmlBootstrap::xxx() calls with the new JUiFramework calls.    
+* Implement bootstrap 2 and 3 drivers    
+* Tests
+* Documentation & Examples
+
+## Questions
+
+* What should happen, when a custom framework driver doesnt support the requested method? 
+    * Throw an exception?
+    * Try to load the method from a core framework driver
+
+## The bootstrap 2 framework driver 
 
 `JUiFramework::assets()`
 
@@ -241,26 +259,3 @@ JUiFramework::register('bs3', function() {
 `JUiFramework::addPanel($selector, $id)`
 
 `JUiFramework::endPanel()`
-
-## BC
-
-JHtmlBootstrap should be marked as deprecated. 
-
-Until then JHtmlBootstrap and JUiFramework can run parallel. 
-
-JHtmlBootstrap will add the bootstrap 2 js files. This could be an issue with the js parts of the frameworks (js conflicts), but it is not differnt to the current situation, where a 3rd party developer adds boostrap 3/4 via on its own.
-
-Perhaps we can redirect all JHtmlBootstrap calls to JUiFramework internal.
-
-## TODO
-
-* Replace all JHtml::_('framework.bootstrap') and JHtmlBootstrap::xxx() calls with the new JUiFramework calls.    
-* Implement bootstrap 2 and 3 drivers    
-* Tests
-* Documentation & Examples
-
-## Questions
-
-* What should happen, when a custom framework driver doesnt support the requested method? 
-    * Throw an exception?
-    * Try to load the method from a core framework driver
