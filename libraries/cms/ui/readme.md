@@ -2,7 +2,7 @@
 
 ## Concept
 
-The basic idea is to introduce a new JUiFramework helper, which acts as Frontend Framework manager.
+The basic idea is to introduce a new JUiFramework helper, which acts as Frontend Framework manager and replaces the unflexible JHtmlBootstrap helper.
 JUiFramework holds the drivers for the frameworks that are supported in the joomla core (currently bootstrap 2 and bootstrap 3),
 but it can be extended to support other framework drivers like foundation, ui-kit, materialize or any other frontend framework out there. 
 
