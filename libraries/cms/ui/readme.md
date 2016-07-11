@@ -150,50 +150,94 @@ JUiFramework::register('bs3', function() {
 ### The bootstrap 2 framework driver 
 
 `JUiFramework::assets()`
+
 `JUiFramework::scripts()`
+
 `JUiFramework::styles()`
+
 `JUiFramework::affix($selector = 'affix', $params = array())`
+
 `JUiFramework::alert($selector = 'alert')`
+
 `JUiFramework::button($selector = 'button')`
+
 `JUiFramework::carousel($selector = 'carousel', $params = array())`
+
 `JUiFramework::dropdown($selector = 'dropdown-toggle')`
+
 `JUiFramework::modal($selector = 'modal', $params = array())`
+
 `JUiFramework::renderModal($selector = 'modal', $params = array(), $body = '')`
+
 `JUiFramework::popover($selector = '.hasPopover', $params = array())`
+
 `JUiFramework::scrollspy($selector = 'navbar', $params = array())`
+
 `JUiFramework::tooltip($selector = '.hasTooltip', $params = array())`
+
 `JUiFramework::startAccordion($selector = 'myAccordian', $params = array())`
+
 `JUiFramework::endAccordion()`
+
 `JUiFramework::addSlide($selector, $text, $id, $class = '')`
+
 `JUiFramework::startTabSet($selector = 'myTab', $params = array())`
+
 `JUiFramework::endTabSet()`
+
 `JUiFramework::startPane($selector = 'myTab', $params = array())`
+
 `JUiFramework::endPane()`
+
 `JUiFramework::addPanel($selector, $id)`
+
 `JUiFramework::endPanel()`
 
+
 ### The bootstrap 3 framework driver 
+
 `JUiFramework::assets()`
+
 `JUiFramework::scripts()`
+
 `JUiFramework::styles()`
+
 `JUiFramework::affix($selector = 'affix', $params = array())`
+
 `JUiFramework::alert($selector = 'alert')`
+
 `JUiFramework::button($selector = 'button')`
+
 `JUiFramework::carousel($selector = 'carousel', $params = array())`
+
 `JUiFramework::dropdown($selector = 'dropdown-toggle')`
+
 `JUiFramework::modal($selector = 'modal', $params = array())`
+
 `JUiFramework::renderModal($selector = 'modal', $params = array(), $body = '')`
+
 `JUiFramework::popover($selector = '.hasPopover', $params = array())`
+
 `JUiFramework::scrollspy($selector = 'navbar', $params = array())`
+
 `JUiFramework::tooltip($selector = '.hasTooltip', $params = array())`
+
 `JUiFramework::startAccordion($selector = 'myAccordian', $params = array())`
+
 `JUiFramework::endAccordion()`
+
 `JUiFramework::addSlide($selector, $text, $id, $class = '')`
+
 `JUiFramework::startTabSet($selector = 'myTab', $params = array())`
+
 `JUiFramework::endTabSet()`
+
 `JUiFramework::startPane($selector = 'myTab', $params = array())`
+
 `JUiFramework::endPane()`
+
 `JUiFramework::addPanel($selector, $id)`
+
 `JUiFramework::endPanel()`
 
 ## BC
